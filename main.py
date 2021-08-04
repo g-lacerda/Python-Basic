@@ -1,4 +1,4 @@
-from math import sqrt
+
 print ('_' * 20)
 escolha = int(input('Escolha o que você quer abrir:\n 1. Calculadora de bhaskara \n 2. Tabuada \n 3. Conversor de moedas \n 4. Dissecar váriável \n 5. Calcular média \n 6. Calcular desconto \n 7. Calcular aumento \n       -->'))
 
@@ -10,20 +10,20 @@ if escolha == 1:
     b = float(input('Digite o valor de B: '))
     c = float(input('Digite o valor de C: '))
 
-    delta = sqrt((b ** 2) - 4 * a * c)
-    X1 = ((b * -1) + delta) / 2 * a
-    X2 = ((b * -1) - delta) / 2 * a
+    delta = (b ** 2) - 4 * a * c
 
     if a == 0:
         print (' O valor de A deve ser diferente de 0')
     elif delta < 0:
-        print ('Sem raízes reais')
+        print ('Delta não pode ser negativo')
+    else:
+        X1 = (-b + delta ** (1 / 2)) / (2 * a)
+        X2 = (-b - delta ** (1 / 2)) / (2 * a)
+        print('O resultado de delta será {}'.format(delta ** 2))
+        print('O resultado de X1 será {}'.format(X1))
+        print('O resultado de X2 será {}'.format(X2))
+        print('_' * 20)
 
-
-    print ('O resultado de delta será {}'.format(delta ** 2))
-    print ('O resultado de X1 será {}'.format(X1))
-    print ('O resultado de X2 será {}'.format(X2))
-    print ('_' * 20)
 
 
 elif escolha == 2:
