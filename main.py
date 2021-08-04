@@ -1,7 +1,6 @@
 from math import sqrt
 print ('_' * 20)
 escolha = int(input('Escolha o que você quer abrir:\n 1. Calculadora de bhaskara \n 2. Tabuada \n 3. Conversor de moedas \n 4. Dissecar váriável \n 5. Calcular média \n 6. Calcular desconto \n 7. Calcular aumento \n       -->'))
-#while (escolha>=7)
 
 if escolha == 1:
     print ('_' * 20)
