@@ -39,9 +39,10 @@ elif escolha == 2:
 elif escolha == 3:
 
     print('_' * 20)
+    print('Os valores foram atualizados da última vez em: 04/08/2021, as 03:10')
     n = float(input('Quantos reais você tem? R$'))
-    print ('Com seus R${} (reais), você consegue ter U${:.2f} (dólares)'.format(n, n / 5.21))
-    print ('Com seus R${} (reais), você consegue ter €{:.2f} (euros)'.format(n, n / 6.18))
+    print ('Com seus R${} (reais), você consegue ter U${:.2f} (dólares)'.format(n, n / 5.20))
+    print ('Com seus R${} (reais), você consegue ter €{:.2f} (euros)'.format(n, n / 6.17))
     print ('Com seus R${} (reais), você consegue ter £{:.2f} (libras)'.format(n, n / 7.24))
     print ('Com seus R${} (reais), você consegue ter ¥{:.2f} (ienes)'.format(n, n / 0.048))
     print('_' * 20)
