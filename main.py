@@ -1,6 +1,7 @@
 from math import sqrt
 print ('_' * 20)
 escolha = int(input('Escolha o que você quer abrir:\n 1. Calculadora de bhaskara \n 2. Tabuada \n 3. Conversor de moedas \n 4. Dissecar váriável \n 5. Calcular média \n 6. Calcular desconto \n 7. Calcular aumento \n       -->'))
+#while (escolha>=7)
 
 if escolha == 1:
     print ('_' * 20)
@@ -74,56 +75,26 @@ elif escolha == 4:
 
 elif escolha == 5:
 
-    print ('_' * 20)
     n1 = float(input('Qual o primeiro valor? '))
     n2 = float(input('Qual o segundo valor? '))
-    a = int(input('Deseja adicionar mais algum valor?\n 1. SIM\n 2. NÃO\n  -->'))
-    if a == 1:
-        n3 = float(input('Qual valor? '))
-        b = int(input('Deseja adicionar mais algum valor?\n 1. SIM\n 2. NÃO\n  -->'))
 
-        if b == 1:
-            n4 = float(input('Qual valor? '))
-            c = int(input('Deseja adicionar mais algum valor?\n 1. SIM\n 2. NÃO\n  -->'))
-            if c == 1:
-                n5 = float(input('Qual valor? '))
-                d = int(input('Deseja adicionar mais algum valor?\n 1. SIM\n 2. NÃO\n  -->'))
-                if d == 1:
-                    n6 = float(input('Qual valor? '))
-                    print('Com os valores {} , {}, {}, {}, {} e {}, você tem uma média de {:.2f}'.format(n1, n2, n3, n4, n5, n6,
-                                                                                                     (
-                                                                                                                 n1 + n2 + n3 + n4 + n5 +n6) / 6))
-                    print('_' * 20)
+    soma = n1 + n2
+    divisao = 2
 
+    while (True):
+        a = int(input('Deseja adicionar mais algum valor?\n 1. SIM\n 2. NÃO\n  -->'))
+        if a == 1:
+            n3 = float(input('Qual valor? '))
+            soma = soma + n3
+            divisao = divisao + 1
 
-                elif d == 2:
-                    print('Com os valores {} , {}, {}, {} e {}, você tem uma média de {:.2f}'.format(n1, n2, n3, n4, n5,
-                                                                                             (n1 + n2 + n3 + n4 + n5) / 5))
-                    print('_' * 20)
-
-                else:
-                    print('Insira uma resposta válida.')
-
-            elif c == 2:
-                print(
-                    'Com os valores {} , {}, {} e {}, você tem uma média de {:.2f}'.format(n1, n2, n3, n4, (n1 + n2 + n3+ n4) / 4))
-                print('_' * 20)
-
-            else:
-                print('Insira uma resposta válida.')
-
-        elif b == 2:
-            print('Com os valores {} , {} e {}, você tem uma média de {:.2f}'.format(n1, n2, n3, (n1 + n2 + n3) / 3))
+        elif a == 2:
+            print('Você tem uma média de {:.2f}'.format((soma) / divisao))
             print('_' * 20)
+            break
 
         else:
             print('Insira uma resposta válida.')
-
-    elif a == 2:
-        print ('Com os valores {} e {}, você tem uma média de {:.2f}'.format(n1, n2, (n1 + n2) / 2))
-        print ('_' * 20)
-    else:
-        print ('Insira uma resposta válida.')
 
 
 elif escolha == 6:
