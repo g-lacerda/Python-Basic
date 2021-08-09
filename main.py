@@ -1,6 +1,16 @@
-
+import math
 print ('_' * 20)
-escolha = int(input('Escolha o que você quer abrir:\n 1. Calculadora de bhaskara \n 2. Tabuada \n 3. Conversor de moedas \n 4. Dissecar váriável \n 5. Calcular média \n 6. Calcular desconto \n 7. Calcular aumento \n       -->'))
+escolha = int(input('Escolha o que você quer abrir:\n 1. Calcular bhaskara \n 2. Tabuada \n 3. Conversor de moedas \n 4. Dissecar váriável \n 5. Calcular média \n 6. Calcular desconto \n 7. Calcular aumento salarial \n 8. Calcular seno, cosseno e tangente do ângulo \n       -->'))
+
+while (escolha < 1):
+    escolha = int(input('Por favor, insira uma opção válida: '))
+    while (escolha > 8):
+        escolha = int(input('Por favor, insira uma opção válida: '))
+
+while (escolha > 8):
+    escolha = int(input('Por favor, insira uma opção válida: '))
+    while (escolha < 1):
+        escolha = int(input('Por favor, insira uma opção válida: '))
 
 if escolha == 1:
     print ('_' * 20)
@@ -23,8 +33,6 @@ if escolha == 1:
         print('O resultado de X1 será {}'.format(X1))
         print('O resultado de X2 será {}'.format(X2))
         print('_' * 20)
-
-
 
 elif escolha == 2:
 
@@ -89,7 +97,6 @@ elif escolha == 5:
         else:
             print('Insira uma resposta válida.')
 
-
 elif escolha == 6:
 
     print('_' * 20)
@@ -105,7 +112,19 @@ elif escolha == 7:
     print('Seu salário irá aumentar R${}, totalizando R${:.2f} mensais'.format(n / 100 * a, n / 100 * (100 + a)))
     print('_' * 20)
 
-else:
+elif escolha == 8:
+    n = float(input('Insira o ângulo: '))
+    while (n == 90):
+        print('O valor deve ser diferente de 90 graus')
+        n = float(input('Insira o ângulo: '))
+    print('Os valores do ângulo {} são:\nSeno:{:.2f}\nCosseno:{:.2f}\nTangente:{:.2f}'.format(n,
+                                                                                              math.sin(math.radians(n)),
+                                                                                              math.cos(math.radians(n)),
+                                                                                              math.tan(
+                                                                                                  math.radians(n))))
 
-    print ('Por favor, insira uma opção válida')
-    print ('_' * 20)
+else:
+    print ('Erro')
+
+
+
